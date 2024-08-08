@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 )
+
 /* DrawInitialBoard makes the starting board size with reference to number of tetrominoes*/
 func DrawInitialBoard(size int) [][]string {
 	initialSize := int(math.Ceil((math.Sqrt(float64(size) * 4))))
