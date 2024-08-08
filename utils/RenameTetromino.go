@@ -1,7 +1,6 @@
 package utils
 
-
-
+/* RenameTetromino takes the tetromino and gives it alphabetical ASCII value calculated from its index in the tetrominoes slice*/
 func RenameTetromino(tetrominoes [][]string) [][]string {
 	
 	var renamedTetrominoes [][]string
