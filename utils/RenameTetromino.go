@@ -2,7 +2,6 @@ package utils
 
 /* RenameTetromino takes the tetromino and gives it alphabetical ASCII value calculated from its index in the tetrominoes slice*/
 func RenameTetromino(tetrominoes [][]string) [][]string {
-	
 	var renamedTetrominoes [][]string
 	for i, array := range tetrominoes {
 		var renamedTetromino []string
@@ -15,15 +14,13 @@ func RenameTetromino(tetrominoes [][]string) [][]string {
 				} else {
 					char = ch
 				}
-				result +=(string(char))
+				result += (string(char))
 			}
-			renamedTetromino = append(renamedTetromino,result)
-			result=""
+			renamedTetromino = append(renamedTetromino, result)
+			result = ""
 		}
 
 		renamedTetrominoes = append(renamedTetrominoes, renamedTetromino)
-	
 	}
-
 	return renamedTetrominoes
 }
