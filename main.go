@@ -33,12 +33,12 @@ func main() {
 		var finalBoard [][]string
 		for {
 			board := utils.DrawInitialBoard(size)
-			finalBoard= utils.DrawFinalBoard(board, renamedTetrominoes)
-            if finalBoard!=nil{
-                 break
+			finalBoard = utils.DrawFinalBoard(board, renamedTetrominoes)
+			if finalBoard != nil {
+				break
 			}
-            size++
-		}		
+			size++
+		}
 		utils.PrintBoard(finalBoard)
 	} else {
 		fmt.Fprintln(os.Stderr, `ERROR`)
