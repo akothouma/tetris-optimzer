@@ -29,9 +29,8 @@ func main() {
 				trimV := utils.TrimVertical(trimH)
 				trimmedTetrominoes = append(trimmedTetrominoes, trimV)
 			}
-			fmt.Println(trimmedTetrominoes)
 			renamedTetrominoes = utils.RenameTetromino(trimmedTetrominoes)
-			fmt.Println(renamedTetrominoes)
+
 		}
 		var finalBoard [][]string
 		for {
