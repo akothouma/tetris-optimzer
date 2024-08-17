@@ -18,7 +18,7 @@ func ExtractTetromino(s string) ([][]string, int) {
 
 		for fileScanner.Scan() {
 			fileLines := fileScanner.Text()
-			if lineCount == 4 {
+			if lineCount == 4 && fileLines == "" {
 				tetrominoes = append(tetrominoes, tetromino)
 				tetromino = []string{}
 				lineCount = 0
