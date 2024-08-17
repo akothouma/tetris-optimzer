@@ -12,7 +12,7 @@ func IsValidTetromino(tetrominoes [][]string) bool {
 		var count int
 		for j := 0; j < len(tetrominoes[i]); j++ {
 			for k := 0; k < len(tetrominoes[i][j]); k++ {
-				if len(tetrominoes[i][j]) != 4 { // checks length of each  line of tetromino
+				if len(tetrominoes[i][j]) != 4 || len(tetrominoes[i]) != 4 { // checks length of each  line of tetromino
 					fmt.Fprintln(os.Stderr, `ERROR`)
 					os.Exit(0)
 				}
