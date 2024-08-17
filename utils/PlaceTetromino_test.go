@@ -13,8 +13,8 @@ func TestPlaceTetrominoes(t *testing.T) {
 		args args
 		want bool
 	}{
-		{"PlaceTetrominoes tests",args{[][] string{{"......"},{"......"},{"......"},{"......"},{"......"},{"......"}},
-		[][]string{{"A","A","A","A"},{"BBBB"},{"CCC","..C"},{".DD","DD."},{"EE","EE"},{"FF.",".FF"},{"GG",".G",".G"},{"HHH",".H."}},8},true},
+		{"PlaceTetrominoes tests", args{[][]string{{"......"}, {"......"}, {"......"}, {"......"}, {"......"}, {"......"}},
+			[][]string{{"A", "A", "A", "A"}, {"BBBB"}, {"CCC", "..C"}, {".DD", "DD."}, {"EE", "EE"}, {"FF.", ".FF"}, {"GG", ".G", ".G"}, {"HHH", ".H."}}, 8}, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

@@ -19,6 +19,7 @@ func main() {
 	}
 	if utils.NonEmptyFile(os.Args[1]) {
 		tetrominoes, size := utils.ExtractTetromino(os.Args[1])
+
 		var renamedTetrominoes [][]string
 		var trimmedTetrominoes [][]string
 		if utils.IsValidTetromino(tetrominoes) {
@@ -28,7 +29,9 @@ func main() {
 				trimV := utils.TrimVertical(trimH)
 				trimmedTetrominoes = append(trimmedTetrominoes, trimV)
 			}
+			fmt.Println(trimmedTetrominoes)
 			renamedTetrominoes = utils.RenameTetromino(trimmedTetrominoes)
+			fmt.Println(renamedTetrominoes)
 		}
 		var finalBoard [][]string
 		for {

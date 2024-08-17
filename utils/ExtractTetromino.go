@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"os"
 )
+
 /* ExtractTetromino reads the sample.txt returning tetrominoes and the number of tetrominoes */
-func ExtractTetromino(s string) ([][]string ,int){
+func ExtractTetromino(s string) ([][]string, int) {
 	var tetromino []string
 	var tetrominoes [][]string
 	var lineCount int
@@ -16,25 +17,25 @@ func ExtractTetromino(s string) ([][]string ,int){
 		fileScanner := bufio.NewScanner(readFile)
 
 		for fileScanner.Scan() {
-			fileLines := fileScanner.Text()            
-			if  lineCount==4{
+			fileLines := fileScanner.Text()
+			if lineCount == 4 {
 				tetrominoes = append(tetrominoes, tetromino)
 				tetromino = []string{}
-				lineCount=0
-			
-			}else {
-				if fileLines!=""{
+				lineCount = 0
+
+			} else {
+				if fileLines != "" {
 					tetromino = append(tetromino, fileLines)
 					lineCount++
 				}
-				
+
 			}
 		}
-		if len(tetromino)!=0{
+		if len(tetromino) != 0 {
 			tetrominoes = append(tetrominoes, tetromino)
 		}
-		
+
 	}
-	size:=len(tetrominoes)
-	return tetrominoes,size
+	size := len(tetrominoes)
+	return tetrominoes, size
 }

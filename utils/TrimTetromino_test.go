@@ -35,8 +35,7 @@ func TestTrimVertical(t *testing.T) {
 		args args
 		want []string
 	}{
-		{"vertically trim unwanted . to optimize tetromino shape", args{[]string{"...#", "...#", "...#", "...#"}}, []string{"#","#","#","#"}},
-	
+		{"vertically trim unwanted . to optimize tetromino shape", args{[]string{"...#", "...#", "...#", "...#"}}, []string{"#", "#", "#", "#"}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

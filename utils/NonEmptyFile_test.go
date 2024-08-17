@@ -11,8 +11,7 @@ func TestNonEmptyFile(t *testing.T) {
 		args args
 		want bool
 	}{
-		{"sample.txt is empty",args{"sample1.txt"},false},
-		{"sample.txt is not empty",args{"sample1.txt"},true},
+		{"sample.txt is empty", args{"sample1.txt"}, true},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
